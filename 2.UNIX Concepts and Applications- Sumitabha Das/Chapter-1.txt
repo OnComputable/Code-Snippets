@@ -1,0 +1,31 @@
+1-->> date   // shows date, tampering could cause problem as there are already scheduled processes, can be changed only by root user.
+
+2-->> tput	// used for clearing the screen
+
+3-->> cal month_num year_num	// used to get calender upto year 9999
+
+4-->> who	// which users are using on the system.
+
+5-->>ps		// all processes that we have created.
+
+6-->>ls		// list all the directories.
+
+6.1-->ls -l D*
+
+7-->ls > list	// Directing output to the file.
+
+8-->cat list 	// To view contents of any file.
+
+9-->wc list	// counts number of words.
+
+10-->ls | wc	// pipeline concept is used to make use of two commands internally.
+
+11-->x=5 
+     echo $x	// x stores value 5.
+
+12-->passwd	// To change password.
+
+13-->exit	// To exit session.
+
+
+
