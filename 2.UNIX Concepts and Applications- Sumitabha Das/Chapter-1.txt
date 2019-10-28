@@ -10,7 +10,7 @@
 
 6-->>ls		// list all the directories.
 
-6.1-->ls -l D*
+6.1-->ls -l D* // finds file starting with D
 
 7-->ls > list	// Directing output to the file.
 
@@ -27,5 +27,4 @@
 
 13-->exit	// To exit session.
 
-
-
+14-->>find  // locates files

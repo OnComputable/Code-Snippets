@@ -1,0 +1,9 @@
+1-->>echo $SHELL	// Tells you which shell type you are using.
+
+2-->>type ls		// Tells the location of the executable program.
+
+3-->>echo $path		// shell searches this path to look for commands. Directoris 				are seperated.
+
+4-->>type echo		// echo is not searched in directories as it is a built-in 
+			command. It is an internal command..
+
