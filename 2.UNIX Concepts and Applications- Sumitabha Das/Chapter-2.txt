@@ -5,5 +5,66 @@
 3-->>echo $path		// shell searches this path to look for commands. Directoris 				are seperated.
 
 4-->>type echo		// echo is not searched in directories as it is a built-in 
-			command. It is an internal command..
+			command. It is an internal command
+
+5-->>ls -l -a -t  can be written as ls -lat. // some command may not use this convention
+
+6-->>ls -lat chap1 chap2 chap3
+
+7-->>cp chap1 chap2 chap3 	// copies files
+
+8-->>rm chap1 chap2		// removes files
+
+9-->>wc note; ls -l note	// two commands are combined
+
+10-->>(wc note; ls -l note) > newlist	// input redirection to new file.
+
+11-->>echo "This is
+> a three line
+> text message			// second prompt apears for taking multiple line i/p
+
+12-->>man wc			// manual page is opened.
+
+13-->>In man page :/f		// pattern matching using '/' operator
+
+14-->>man 4 passwd		// search the man page for specified section i.e. 4 here
+
+15-->>man man			// manual page for manual page.
+
+16-->>PAGER=less; export pager	// change the man page shell variable. valid for
+				only current session type $echo $PAGER for info.
+
+17-->>man -k awk		// gives one line description of the command.
+awk (1)              - pattern scanning and text processing language
+filefuncs (3am)      - provide some file related functionality to gawk
+gawk (1)             - pattern scanning and processing language
+igawk (1)            - gawk with include files
+mawk (1)             - pattern scanning and text processing language
+nawk (1)             - pattern scanning and text processing language
+readdir (3am)        - directory input parser for gawk
+rwarray (3am)        - write and read gawk arrays to/from files
+time (3am)           - time functions for gawk
+
+18-->>apropos FTP		// similar to -k only.
+apt-ftparchive (1)   - Utility to generate index files
+ftp (1)              - Internet file transfer program
+netkit-ftp (1)       - Internet file transfer program
+netkit-netrc (5)     - user configuration for ftp
+netrc (5)            - user configuration for ftp
+pam_ftp (8)          - PAM module for anonymous access module
+pftp (1)             - Internet file transfer program
+sftp (1)             - secure file transfer program
+sftp-server (8)      - SFTP server subsystem
+
+19-->>wc --help			// description in few words.
+
+20-->>stty sane			// when command prompt works erratic. To use enter 
+				use [ctrl+j]or[ctrl+m].
+
+21-->>[ctrl+z]			// suspends shell process and returns to shell.
+				to continue the process press fg and [enter].
+
+22-->>cal 2003			// shows cal for year 2003 as shown in man page 
+				as year and month are not compulsory.
+			
 
