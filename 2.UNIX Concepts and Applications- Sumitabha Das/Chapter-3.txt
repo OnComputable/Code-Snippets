@@ -1,1 +1,71 @@
-1-->>
+1-->date +%m		// prints the month
+
+2-->>date +%h		// month name print.
+
+3-->>date +"%h %m"	// you can combine them as well
+
+4-->>echo "Enter filename: \c"		// prints the echoed message in the same line due to \c.
+
+5-->>echo '\07'			// ascii value for beep.
+
+6-->>printf "On"		// alternative to echo builtin only on bash shell otherwise external command.
+
+7-->>printf "My current shell is %s\n"$SHELL		// prints the path for shell using printf similar to echo.
+
+8-->>printf "The value of 255 is %o in octal and %x in hexadecimal\n" 255 255		// prints values as mentioned in cmd.
+
+9-->>bc 				// used as a calculator. comes under filter type of commnd which required users input 
+12+12
+24
+43/32
+1
+43.0/43
+1
+43.0/87
+0
+43.0/87.5
+0
+scale=2
+5/6
+.83
+clear
+0
+input base to 2 conversion
+(standard_in) 10: syntax error
+ibase=2
+11001010
+202
+
+
+obase = 2
+14
+11
+
+obase=2
+14
+11
+				it won't quit until user makes it.
+
+10-->>script			// stores your terminal commands as scripts. Not present in the POSIX though.
+exit				// for ending the script. stores the script in the file named typescript in the working folder.
+				// doesn't record properly in vi.
+
+11-->>script -a			// appends to the existing typescript
+
+12-->>script logfile		// Logs activities to file logfile.
+
+13-->>uname			// displays name of the os.
+
+14-->>uname -r			// version of os.
+
+15-->>uname -n			// tells you the hostname.
+
+16-->>tty			// shows you the location of your terminal file as unix considers everything as a file.
+
+17-->>stty -a			// to change the characteristics of your terminal.
+
+18-->>stty -echo		// turns of the keyboard input.
+
+19-->>stty sane			// if you mess up your terminal configuration use this to restore it to default behaviour.
+
+
