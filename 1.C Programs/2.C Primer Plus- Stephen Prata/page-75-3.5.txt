@@ -1,0 +1,13 @@
+//Examples of Integer Constants
+
+type                     hexadecimal     octal    decimal
+char                      \0x41           \0101     N.A.
+int                        0x41           0101       65
+unsigned int               0x41u          0101u     65u
+long                       0x41L           0101L    65L
+unsigned long              0x41UL          0101UL   65UL
+long long                  0x41LL          0101LL   65LL
+unsigned long long         0x41ULL         0101ULL  65ULL
+
+
+//Writing constants with the int family.

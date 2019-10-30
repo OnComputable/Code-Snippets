@@ -1,0 +1,12 @@
+// some floating point representation
+
+2.58
+
+1.376+7
+
+12E20
+
+1.6E-19
+
+
+32 bits for floating point number before point and 8 bits for exponent.
