@@ -12,4 +12,40 @@
 
 7-->>cd ../..		// moves two level up.
 
-8-->>ls			// lists the files in the working folder.
+8-->>ls			// lists the files in the working folder
+
+9-->>ls -Fx		// shows executable files in listing.
+
+10-->>ls -aFx		// shows all hidden executable files in listing.
+
+11-->>ls -xR		// shows all the files recursively for all present and the inner folder from the native path.
+
+12-->>cat filename	// used to display the contents of the small files in the terminals.
+
+13-->>cat -vn		// numbers the line and also -v option shows the non-printable characters.
+
+14-->>cat > foo		// creates a file names foo and you can start typing in it directly.
+
+15-->>cp sourcepath destinationpath	// copies file from source to destination.
+
+16-->>cp file1 file2 file3 dirnametobecopiedin	// can copy multiple files in another directory.
+
+17-->>cp file*	dirnametobecopiedin	// * is used as matching pattern to copy file named file :).
+
+18-->>cp -R progs newprogs		// copies directory structure from source folder to destination folder.
+
+19-->>rm * 			// all files willl be gone beware!!
+
+20-->>rm -i chap1 chap2		// -i for interactive ask's are you confirming to delete a file.
+
+21-->>rm -rf *			// removes files forcibally also files which are protected beware!!
+
+22-->>mv chap1 chap2		// renames the file named chap1 to chap2.
+
+23-->>mv chap1 progs		// moves chap1 ro directory named progs. mv have a dual nature.
+
+24-->>more filename		// pager command which shows the file as for viewing.
+					you can also invoke vi from more or using less pager as well using the v command, you cabn also use regular expression for parttern matching
+				in more using / and also find help using h command. It's variations are limitless with other options.
+ 
+25-->>
