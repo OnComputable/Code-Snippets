@@ -1,0 +1,15 @@
+1-->>echo $PATH		// displays your home directory
+
+2-->>pwd		// tells you the path of the working directory
+
+3-->>cd 		// changes directory and without argument gets us back to home directory directly. cd can also fail if you don't have proper permission to access a folder.
+
+4-->>mkdir		// used to create the directory.
+
+5-->>rmdir directoryname	// removes the directory.
+
+6-->>cd ..		// moves one level up in the directory hierarchy.
+
+7-->>cd ../..		// moves two level up.
+
+8-->>ls			// lists the files in the working folder.
