@@ -48,4 +48,34 @@
 					you can also invoke vi from more or using less pager as well using the v command, you cabn also use regular expression for parttern matching
 				in more using / and also find help using h command. It's variations are limitless with other options.
  
-25-->>
+25-->>lp filename		// printing a file using lp subsystem.
+
+26-->>cancel printername	// cancels the job given to the specific printer.
+
+27-->>file *			// identifies file types using the MAGIC NUMBER that is embedded in the first few bytes of every file.
+
+28-->>wc filename		// counts lines, words and characters from the file.
+
+29-->>wc file1 file2 file3	// counts parameters of multiple lines as well.
+
+30-->>od -bc octal_data_filename	// displays the octal data in the friendlier format.
+
+31-->>cmp filename1 filename2		// compares two files byte by byte and return the first occurences of mismatch.
+
+32-->>cmp -l file1 file2		// lists all the mismatch acquired in the both of the files in the form of list.
+
+33-->>comm file1 file2		// checks for the common in the 2 files, not understood well:(.
+
+34-->>diff file1 file2		// diff tells you what changes needs to be made for making the file identical.
+
+35-->>dos2unix filename	// converts dos files into unix file format.
+
+36-->>unix2dos filename		// converts unix files in the format of dos.
+
+37-->>gzip filename		// compress a file upto certain limits. limits are dependent on the type of data.
+
+38-->>gunzip filename		// to decompress the .gz file.
+
+39-->>tar -cvf filename.tar	// creates an archive of all the directory and files here c means create, v means verbose and f is specifying archive arch.
+				use the man page for different options using tar.
+40-->zip and unzip		// zip and unzip option performs compression and decompression respectively along with creating an archive as tar files .
