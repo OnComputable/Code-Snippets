@@ -11,7 +11,7 @@ int main(void)
 	printf("a. \"%s\"\n",F_NAME);
 	printf("b. \"%20s\"\n",F_NAME);
 	printf("c. \"%-20s\"\n", F_NAME);
-	printf("d. \"%-.5s\"\n",F_NAME);
+	printf("d. \"%-8s\"\n",F_NAME);
 
 	return 0;
 }
