@@ -1,0 +1,23 @@
+1-->>id			// to know your UID and GID
+
+2-->>chmod u+x filename	 	// make the file executable for the user.
+
+3-->>chmod ugo+x filename	// u-user, g-group, o-others
+
+4-->>chmod a+x filename		// similar to above command here a- all.
+
+5-->> chmod +x	filename	// similar to above here a is implicitely understood.
+
+6-->>chmod go-r	filename	// removes the permission for group and others.
+
+7-->>chmod 666 filename		// octals to define permission 4- read, 2- write, 1- execute.
+				remember that file permission can be only changed by the owner.
+8-->>chmod -R 755 filename	// assigns permissions to the derectory hierarchy.
+
+9-->>chmod -R 755 .		// works on hidden files.
+
+10-->>chmod -R a+x *		// leaves out hidden files.
+
+11-->>chown sharma note		// changing the owner of the file. Remember that after changing the owner you cannnot revert back your actions.
+
+12-->chgrp dba dept.lst		// changing the group permission of the group.
