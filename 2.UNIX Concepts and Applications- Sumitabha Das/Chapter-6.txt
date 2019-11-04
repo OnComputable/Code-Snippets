@@ -1,0 +1,21 @@
+1-->>vi filename	// to create a file thorough vi editor.
+
+2-->>vim commands
+	:u	// undo
+	ctrl+r	// redo
+		// commands are case sensitive
+		// navigating over a network could fail if page up-down or any arrrow keys are used instead usr hjkl
+	zz	// save and quit
+	w	// save
+	wq	// save and quit
+	ctrl+z	// minimize	to maximize use fg in shell 
+	q	// abort editing
+	linenumberG	// goes to certain lineno here, linenumber is an integer
+	4dd		// deleting 4 lines from below the line we are working on. can also be used as dd for deleting a line.
+	y		// copying a line similar ti above example all copy, delete and paste operation can be performed with joining an
+			integer to the front as shown above.
+	p		// pasting a line
+	x		// delete a character in visual mode
+	4x		// deletes that many characters.
+	
+	
