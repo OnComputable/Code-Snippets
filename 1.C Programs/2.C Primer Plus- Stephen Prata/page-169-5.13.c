@@ -10,5 +10,5 @@ int main(void)			// finds sum of first 20 integers
 		sum = sum + count;	// statement
 	printf("sum = %d\n", sum);	// function statement
 
-	return 0;		// return statement
+	return 0;		// return statement  
 }
