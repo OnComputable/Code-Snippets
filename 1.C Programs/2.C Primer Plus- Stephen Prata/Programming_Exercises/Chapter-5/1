@@ -1,0 +1,18 @@
+// que 1
+#include<stdio.h>
+#define HOUR 60
+
+int main(void)
+{
+	int Hour, Minutes;
+
+	printf("Enter Number of minutes:");
+	scanf("%d", &Minutes);
+
+	Hour = Minutes/HOUR;
+	Minutes %=HOUR;
+
+	printf("Hour = %d, Minutes = %d\n", Hour, Minutes);
+
+	return 0;
+}
