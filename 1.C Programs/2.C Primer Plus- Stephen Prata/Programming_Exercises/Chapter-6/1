@@ -1,0 +1,19 @@
+// Que 6
+#include<stdio.h>
+
+int main(void)
+{
+	long int Square , Cube, Result_Square, Result_Cube;
+	printf("  Square       cube\n\n");
+
+	for(int i=1;i<=5;i++)
+	{
+		Square = i*i;
+		Cube = i*i*i;
+
+		printf("   %d             %d\n", Square, Cube);
+
+	}
+	
+	return 0;
+}
