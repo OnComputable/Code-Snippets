@@ -4,13 +4,19 @@
 
 int main(void)
 {
-	int ch;
+	int ch, count = 0;
 
 	while((ch = getchar()) != '#')
 	{
-
-		printf()
+		count++;
+		if(count % 9 == 0)
+		{
+			printf("\n");
+		}
+		printf("%c -> %d ", ch,ch);
 	}
+
+	printf("\nDone!!\n");
 
 	return 0;
 }
