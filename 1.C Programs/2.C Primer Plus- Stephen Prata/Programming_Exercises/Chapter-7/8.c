@@ -46,35 +46,51 @@ float Calculate_Taxes(float Gross_Pay)
 int main(void)
 {
 	float Hours_Per_Week, Gross_Pay, Taxes, Net_Pay;
-	char Choice;
+	int Choice;
+	int flag = 0;
 
-	printf("************************************************************************\n");
-	printf("Enter the number corresponding to the desired pay rate or action: \n");
-	printf("1) $8.75/hr \t\t\t2) $9.33/hr\n");
-	printf("3) $10.00/hr \t\t\t4) $11.20/hr\n");
-	printf("5) quit\n");
-	printf("*************************************************************************\n");
+	//printf("************************************************************************\n");
+	//printf("Enter the number corresponding to the desired pay rate or action: \n");
+	//printf("1) $8.75/hr \t\t\t2) $9.33/hr\n");
+	//printf("3) $10.00/hr \t\t\t4) $11.20/hr\n");
+	//printf("5) quit\n");
+	//printf("*************************************************************************\n");
 	
-       while((Choice = getchar()) != '5')
-	{
+       do
+       {
+		  printf("************************************************************************\n");
+	       	  printf("Enter the number corresponding to the desired pay rate or action: \n");
+       		  printf("1) $8.75/hr \t\t\t2) $9.33/hr\n");
+       		  printf("3) $10.00/hr \t\t\t4) $11.20/hr\n");
+       		  printf("5) quit\n");
+        	  printf("*************************************************************************\n");
+
+		again:scanf("%d", &Choice);
 		switch(Choice)
 		{
-			case '1': Basic_Pay = 8.75;
+			case 1: Basic_Pay = 8.75;
 				  printf("Pay rate has been set to $8.75/hr\n");
 				  break;
-			case '2': Basic_Pay = 9.33;
+			case 2: Basic_Pay = 9.33;
 				  printf("Pay rate has been set to $9.33/hr\n");
 				  break;
-			case '3': Basic_Pay = 10.00;
+			case 3: Basic_Pay = 10.00;
 				  printf("Pay rate has been set to $10.00/hr\n");
 				  break;
-			case '4': Basic_Pay = 11.20;
+			case 4: Basic_Pay = 11.20;
 				  printf("Pay rate has been set to $11.20/hr\n");
 				  break;
+			case 5: flag=1;
+				  break;
 			default:  printf("Enter a valid Choice!!\n");
+				  goto again;
 				  break;
 		}
-
+		
+		if(flag == 1)
+		{
+			break;	
+		}
 		printf("Enter the number of hours that you worked for the week:\n");
 		if(scanf("%f", &Hours_Per_Week) == 1)
 		{
@@ -86,16 +102,10 @@ int main(void)
 			printf("Your Net pay is $%.2f\n", Net_Pay);
 		}
 
-	printf("************************************************************************\n");
-        printf("Enter the number corresponding to the desired pay rate or action: \n");
-        printf("1) $8.75/hr \t\t\t2) $9.33/hr\n");
-        printf("3) $10.00/hr \t\t\t4) $11.20/hr\n");
-        printf("5) quit\n");
-        printf("*************************************************************************\n");
+	flag = 0;
+	}while(1);
 
-
-	}
-   finish: printf("Done!!\n");
+    printf("Done!!\n");
 
 	return 0;
 }
