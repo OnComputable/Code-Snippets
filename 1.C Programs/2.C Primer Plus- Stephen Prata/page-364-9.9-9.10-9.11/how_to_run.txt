@@ -1,0 +1,4 @@
+// to run with multiple files to create an output file via linking them.
+
+gcc page-363-9.9.c page-364-9.10.c -o output
+
