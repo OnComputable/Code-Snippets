@@ -11,6 +11,7 @@ int main(void)
 {
 	int dice, roll;
 	int sides;
+	int status;
 
 	srand((unsigned int) time(0));	// randomize seed
 	printf("Enter the number of sides per die, 0 to stop.\n");
