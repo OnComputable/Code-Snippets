@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
 		for (int i = 2; i < argc; i++)
 		{
 			counts[i - 2] = 0;
-			if ((fp = fopen(argv[1], "r")) == NULL)
+			if ((fp = fopen(argv[i], "r")) == NULL)
 			{
 				fprintf(stderr,"Can't open file %s\n", argv[i]);
 				continue;
