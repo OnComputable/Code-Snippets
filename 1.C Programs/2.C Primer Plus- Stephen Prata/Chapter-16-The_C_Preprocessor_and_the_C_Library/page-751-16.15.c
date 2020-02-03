@@ -2,7 +2,7 @@
 
 #include <stdio.h>
 #include <math.h>
-#define RAD_TO_DEG (180/(4 * atan1(1)))
+#define RAD_TO_DEG (180/(4 * atanl(1)))
 
 // generic square root function
 #define SQRT(X) _Generic((X),\
@@ -12,10 +12,10 @@
 
 // generic sine function, angle in degrees
 #define SIN(X) _Generic((X),\
-		long double: sin1((X)/RAD_TO_DEG),\
+		long double: sinl((X)/RAD_TO_DEG),\
 		default:     sin((X)/RAD_TO_DEG),\
 		float:	     sinf((X)/RAD_TO_DEG\
-)
+))
 
 
 int main(void)
