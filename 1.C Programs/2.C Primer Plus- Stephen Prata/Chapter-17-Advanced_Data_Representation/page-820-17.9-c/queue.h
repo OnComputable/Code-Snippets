@@ -3,9 +3,15 @@
 #define _QUEUE_H_
 #include <stdbool.h>
 
+typedef struct item
+{
+	long arrive;	// the time when a customer joins the queue
+	int processtime;	// the number of consultation minutes desired
+} Item;
+
 // INSERT ITEM TYPE HERE
 // FOR EXAMPLE
-typedef int Item;	// for use in _q.c
+//typedef int Item;	// for use in _q.c
 // OR typedef struct item {int gumption; int charisma;} Item;
 
 #define MAXQUEUE 10
