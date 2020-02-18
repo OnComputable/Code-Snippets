@@ -3,6 +3,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "tree.h"
+#define MAXTERMS 10
+
 
 // local data type
 typedef struct pair
@@ -232,8 +234,7 @@ static Pair SeekItem(const Item * pi, const Tree * ptree)
 	return look;			// successful return
 }
 
-static void DeleteNode(Trnode **ptr)
-// ptr is address of parent member pointing to target node
+static void DeleteNode(Trnode **ptr) // ptr is address of parent member pointing to target node
 {
 	Trnode * temp;
 
@@ -241,7 +242,7 @@ static void DeleteNode(Trnode **ptr)
 	{
 		temp = *ptr;
 		*ptr = (*ptr)->right;
-		free(temp
+		free(temp);
 	}
 	else if ((*ptr)->right == NULL)
 	{
@@ -252,8 +253,8 @@ static void DeleteNode(Trnode **ptr)
 	else		// deleted node has two children
 	{
 		// find where to reattach right subtree
-		for (temp = (*ptr)->left; temp->right != NULL; temp = temp->right)
-			continue;
+		for (temp = (*ptr)->left; temp->right != NULL;temp = temp->right)
+		continue;
 		temp->right = (*ptr)->right;
 		temp = *ptr;
 		*ptr = (*ptr)->left;

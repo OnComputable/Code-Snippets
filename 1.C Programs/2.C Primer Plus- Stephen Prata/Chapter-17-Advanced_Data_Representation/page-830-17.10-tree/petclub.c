@@ -3,6 +3,7 @@
 #include <string.h>
 #include <ctype.h>
 #include "tree.h"
+#define SLEN 32
 
 char menu(void);
 void addpet(Tree * pt);
@@ -85,7 +86,7 @@ void findpet(const Tree * pt)
 	uppercase(temp.petname);
 	uppercase(temp.petkind);
 	printf("%s the %s ", temp.petname, temp.petkind);
-	if (InTree(&temo, pt))
+	if (InTree(&temp, pt))
 		printf("is a member.\n");
 	else
 		printf("is not a member.\n");
