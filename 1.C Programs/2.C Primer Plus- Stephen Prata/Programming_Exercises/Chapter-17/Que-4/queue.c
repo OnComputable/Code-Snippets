@@ -22,7 +22,7 @@ void InitializeQueue(Queue * pq)
 	pq->items = 0;	
 }
 
-bool QueueIsFull(const Queue *pq)
+bool QueueIsFull(const Queue * pq)
 {
 	return pq->items == MAXQUEUE;
 }
@@ -54,6 +54,9 @@ bool EnQueue(Item item, Queue * pq)
 	if (QueueIsEmpty(pq))
 	{
 		pq->front = new;
+	}
+	else {
+		(pq->rear)->next = new;
 	}
 	pq->rear = new;
 	pq->items++;	// increment items count
