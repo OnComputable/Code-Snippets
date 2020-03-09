@@ -22,4 +22,6 @@ int main()
  * 	Because the for loop doesn't have an entering 
  * 	point it is ended with a semicolon.
  * 	That is why we get the value as such.
- * ******************************************************/ 
+ * 	To fix the program just remove the semicolon.
+ * ******************************************************/
+
