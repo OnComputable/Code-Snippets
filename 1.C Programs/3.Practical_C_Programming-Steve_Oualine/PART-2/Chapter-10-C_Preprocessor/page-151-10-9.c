@@ -1,5 +1,5 @@
 /********************************************************
- * [ File:sqr/sqr.c ]
+ * [ File: sqr-i/sqr-i.c ]
  * ******************************************************/ 
 #include <stdio.h>
 #define SQR(x) ((x) * (x))
@@ -8,16 +8,16 @@ int main()
 {
 	int counter;	// counter for loop
 
-	for (counter = 0; counter < 5; ++counter)
-	{
-		printf("x %d, X squared %d\n", counter+1, SQR(counter+1));
-	}
+	counter = 0;
+
+	while (counter < 5)
+		printf("x %d square %d\n", counter, SQR(++counter));
 
 	return (0);
 }
 
-
 /********************************************************
- * Que 10-5: Answer: putting paranthesis around the 
- * 	preprocessor variables is required.
+ * Que: 10-6 : Answer: The statement SQR(++counter)
+ * 	is incremented twice once while execution 
+ * 	and once due to macro expansion. 
  * ******************************************************/ 

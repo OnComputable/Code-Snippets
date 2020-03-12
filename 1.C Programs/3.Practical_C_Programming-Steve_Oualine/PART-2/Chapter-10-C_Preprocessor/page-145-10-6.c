@@ -17,5 +17,7 @@ int main()
 }
 
 /********************************************************
- * Que 10-3: Answer: 
+ * Que 10-3: Answer: The problem is with ; that is 
+ * 	given at the end of the preprocessor please
+ * 	avoid the repeatition of ';'. 
  * ******************************************************/ 

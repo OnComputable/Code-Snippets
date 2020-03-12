@@ -5,7 +5,7 @@
 
 #include <stdio.h>
 
-#define MAX =10;
+#define MAX =10
 
 int main()
 {
@@ -20,5 +20,6 @@ int main()
 }
 
 /********************************************************
- * Que: 10-2: Answer: 
+ * Que: 10-2: Answer:  removing the = from the prep-
+ * 	rocessor will remove the error.
  * ******************************************************/ 

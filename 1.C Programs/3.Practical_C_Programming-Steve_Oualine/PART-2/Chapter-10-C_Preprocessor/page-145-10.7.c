@@ -4,8 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define DIE \
-	fprintf(stderr, "Fatal Error:Abort\n");exit(8);
+#define DIE {fprintf(stderr, "Fatal Error:Abort\n");exit(8);}
 
 int main()
 {
@@ -22,5 +21,6 @@ int main()
 }
 
 /********************************************************
- * Que: 10-4: Answer: 
+ * Que: 10-4: Answer: put curly braces around all the 
+ * 	long statements created at preprocessors.
  * ******************************************************/ 
