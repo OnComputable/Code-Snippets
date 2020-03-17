@@ -26,5 +26,10 @@ int main()
 }
 
 /********************************************************
- * Question 11-1: Answer: 
+ * Question 11-1: Answer:  On my system both the Conne -
+ * 	ctions worked! That might not be the case
+ * 	after looking at the answer I realized that the
+ * 	use of char for flag could not fit the 
+ * 	DIRECT_CONNECT values. Therefore flag must be 
+ * 	stored as short to fix it.
  * ******************************************************/ 
