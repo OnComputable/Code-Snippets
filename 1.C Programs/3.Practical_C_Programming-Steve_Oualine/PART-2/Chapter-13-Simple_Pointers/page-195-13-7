@@ -1,0 +1,23 @@
+/******************************************************* 
+*	[ File: Bad Pointer Usage ]
+*******************************************************/ 
+
+// This program shows programming practices that should
+//**NOT** be used.
+// Unfortunately, too many programmers use them
+
+int array[10];		// An array for our data
+
+int main()
+{
+	int *data_ptr;		// pointer to the data
+	int value;		// A data value
+
+	data_ptr = &array[0];	// Point to the first element
+	value = *data_ptr++;	// Get element #0, data_ptr points to element #1
+	value = *++data_ptr;	// Get element #2, data_ptr points to element #2
+	value = ++*data_ptr;	// Increment element #2, return its value
+				// Leave data_ptr alone
+
+	return(0);
+}
