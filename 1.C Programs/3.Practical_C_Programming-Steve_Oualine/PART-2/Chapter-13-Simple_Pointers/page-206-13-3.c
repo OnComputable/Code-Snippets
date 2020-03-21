@@ -1,22 +1,25 @@
 /********************************************************
- * [ File: tmp-name/tmp-name.c ]
- * ******************************************************/
+ * [ File: tmp2/tmp2.c ]
+ * ******************************************************/ 
 
 #include <stdio.h>
 #include <string.h>
 
 /********************************************************
- * tmp_name -- Return a temporary filename.
+ * tmp_name -- Returns a temporary filename.
  *
  * Each time this function is called, a new name will
  * be returned.
+ *
+ * Warning: There should be a warning here, but if we
+ * 	put it in, we would answer the question.
  *
  * Returns
  * 	Pointer to the new filename.
  * ******************************************************/ 
 char *tmp_name(void)
 {
-        char name[30];	// The name we are generating
+	static char name[30];	// The name we are generating
 	static int sequence = 0;	// Sequence number for last digit
 
 	++sequence;	// Move to the next filename
@@ -34,17 +37,15 @@ char *tmp_name(void)
 
 int main()
 {
-	char *tmp_name(void);	// Get name of temporary file
+	char *tmp_name(void);	// get name of temporary file
+	char *name1;		// name of a temporary file
+	char *name2;		// name of a temporary file
 
-	printf("Name: %s\n", tmp_name());
+	name1 = tmp_name();
+	name2 = tmp_name();
+
+	printf("Name1: %s\n", name1);
+	printf("Name2: %s\n", name2);
 
 	return (0);
 }
-
-
-/********************************************************
- * Question 13-1 : Answer :  Make name variable as 
- * 		static as it is loosing it's value
- * 		when function call gets popped off
- * 		from the stack.
- * ******************************************************/ 
