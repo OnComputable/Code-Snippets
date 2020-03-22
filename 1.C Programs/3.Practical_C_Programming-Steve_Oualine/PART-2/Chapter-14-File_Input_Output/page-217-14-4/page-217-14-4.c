@@ -27,3 +27,14 @@ int main()
 
 	return (0);
 }
+
+/********************************************************
+ * Question: 14-2 : Answer: The reason for the size 
+ * 	difference between Windows and UNIX is that 
+ * 	of the carriage return character bit added to 
+ * 	the end in case of Windows system but in case
+ * 	of UNIX system case both ASCII and binary are
+ * 	both same. And if we want to open a file
+ * 	for binary write in UNIX we can use "wb"
+ * 	while opening the file. i.e. with fopen();
+ * ******************************************************/ 
