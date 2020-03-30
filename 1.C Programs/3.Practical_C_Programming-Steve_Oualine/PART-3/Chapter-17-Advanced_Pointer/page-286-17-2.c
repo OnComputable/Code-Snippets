@@ -37,3 +37,16 @@ int find(char *name)
 	 */
 	return (current_ptr != NULL);
 }
+
+
+/********************************************************
+ * Question: 17-1: Answer : The problem is caused by 
+ * 	while statement in which we directly use the 
+ * 	current_ptr for data before checking that it
+ * 	is NULL or not.
+ * 	so the statements should be - 
+ * 	while (current_ptr != NULL) {
+ *		if (strcmp(current_ptr->data, name) == 0)
+ *			break;
+ * 	}
+ * ******************************************************/ 
