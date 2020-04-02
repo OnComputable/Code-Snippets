@@ -22,5 +22,9 @@ int main()
 
 
 /********************************************************
- * Que : 19-1: Answer: 
+ * Que : 19-1: Answer: The use of prototype is wrong
+ * 		the first argument needs to be int 
+ * 		and the second needs to be float,
+ * 		as it is reversed when we look at the 
+ * 		function defination. 
  * ******************************************************/ 
