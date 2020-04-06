@@ -136,5 +136,5 @@ enum CHAR_TYPE get_char_type(int ch) {
 
 	if (ch == EOF) return (C_EOF);
 
-	return (type_info(ch));
+	return (type_info[ch]);
 }

@@ -18,7 +18,7 @@
 
 #define LINE_MAX 500		// Longest possible line
 
-struct input file {
+struct input_file {
 	FILE *file;		// File we are reading
 	char line[LINE_MAX];	// Current line
 	char *char_ptr;		// Current character on the line
@@ -29,11 +29,11 @@ struct input file {
 
 // Input file that we are reading
 static struct input_file in_file = {
-	NULL,		// file
-	"",		// line
-	NULL,		// char_ptr
-	'\0',		// cur_char
-	'\0',		// next_char
+	NULL,		/* file*/
+	"",		/* line*/
+	NULL,		/* char_ptr*/
+	'\0',		/* cur_char*/
+	'\0',		/* next_char*/
 };
 
 /********************************************************

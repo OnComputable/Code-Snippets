@@ -38,6 +38,7 @@ static enum TOKEN_TYPE read_comment(void)
 		if (in_cur_char() == '\n')
 			return (T_COMMENT);
 		if ((in_cur_char() == '*') && (in_next_char() == '/')) {
+			in_comment = FALSE;
 			// Skip past the ending
 			in_read_char();
 			in_read_char();
@@ -56,10 +57,10 @@ static enum TOKEN_TYPE read_comment(void)
 enum TOKEN_TYPE next_token(void)
 {
 	if (in_comment)
-		return (read_comment ());
+		return (read_comment());
 
 	while (is_char_type(in_cur_char(), C_WHITE)) {
-		is_read_char();
+		in_read_char();
 	}
 	if (in_cur_char() == EOF)
 		return (T_EOF);
@@ -74,13 +75,13 @@ enum TOKEN_TYPE next_token(void)
 			return (T_ID);
 		case C_DIGIT:
 			in_read_char();
-			if ((in_cur_char() == 'X') || (in_cur_char() == 'X')) {
+			if ((in_cur_char() == 'X') || (in_cur_char() == 'x')) {
 				in_read_char();
 				while (is_char_type(in_cur_char(), C_HEX_DIGIT))
 					in_read_char();
 				return (T_NUMBER);
 			}		
-			while (is_char_type(in_char_char(), C_DIGIT))
+			while (is_char_type(in_cur_char(), C_DIGIT))
 				in_read_char();
 			return (T_NUMBER);
 		case C_SLASH:
