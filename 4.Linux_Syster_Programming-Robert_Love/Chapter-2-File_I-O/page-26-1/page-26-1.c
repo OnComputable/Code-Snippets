@@ -58,6 +58,13 @@ int main(void)
  * S_IWOTH
  * S_IXOTH
  * ******************************************************/ 
+	// File - page 31-1
+	//fd = open ("home/teach/pearl", O_WRONLY | O_CREAT | O_TRUNC, S_IWUSR | S_IRUSR | S_IWGRP | S_IRGRP | S_IROTH);
+	
+	// File - page 31-2
+	// This and the 31-1 have same meaning
+	fd = open ("home/teach/pearl", O_WRONLY | O_CREAT | O_TRUNC, 0664);
+
 
 
 	if (fd == -1)
@@ -65,5 +72,7 @@ int main(void)
 		// Error
 		printf("Error openning the file.\n");
 	}
+
+
 	return (0);
 }

@@ -1,0 +1,25 @@
+my name is Pawan.
+This snippet handles all five conditions. The loop reads len bytes from the current file
+position of fd into buf , which of course must be at least len bytes in length. It continues
+reading until it reads all len bytes, or until EOF is reached. If more than zero, but less
+than len bytes are read, len is reduced by the amount read, buf is increased by the
+amount read, and the call is reissued. If the call returns −1 , and errno equals EINTR , the
+call is reissued without updating the parameters. If the call returns −1 , and errno is set
+to anything else, perror() is called to print a description to standard error and the loop
+terminates.
+34
+|
+Chapter 2: File I/OPartial reads are not only legal, but common. Innumerable bugs derive from program‐
+mers not properly checking for and handling short read requests. Do not add to the list!
+Nonblocking Reads
+Sometimes, programmers do not want a call to read() to block when there is no data
+available. Instead, they prefer that the call return immediately, indicating that no data
+is available. This is called nonblocking I/O; it allows applications to perform I/O, po‐
+tentially on multiple files, without ever blocking, and thus missing data available in
+another file.
+Consequently, an additional errno value is worth checking: EAGAIN . As discussed pre‐
+viously, if the given file descriptor was opened in nonblocking mode (if O_NONBLOCK was
+given to open() ; see “Flags for open()” on page 26) and there is no data to read, the
+read() call will return −1 and set errno to EAGAIN instead of blocking. When performing
+nonblocking reads, you must check for EAGAIN or risk confusing a serious error with
+the mere lack of data. For example, you might use code like the following:
