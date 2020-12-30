@@ -1,0 +1,5 @@
+1---> For All warnings::  -Wall -Weffc++ -Wextra -Wsign-conversion -Werro
+
+2---> Flags for getting running code with specific version language:: For GCC/G++, you can pass compiler flags -std=c++11, -std=c++14, -std=c++17, or -std=c++2a to enable 
+
+3---> To run in c++17 format:: g++-9 -std=c++17 filename.cpp
