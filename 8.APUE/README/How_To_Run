@@ -1,0 +1,14 @@
+
+#For the first program of APUE to run 
+
+
+->First use 'make' to compile all the files.
+
+
+->
+command:::
+
+gcc -o obejct_file_name prog_name.c -I apue.3e/include/ -L apue.3e/lib/ -lapue
+
+->Understanding what we did::
+-I tells gcc which directory to look for the include file. -L tells it the location of the library directory, and -lapue, tells the name of the library file to look for in that directory
