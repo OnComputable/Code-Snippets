@@ -1,0 +1,5 @@
+1] https://stackoverflow.com/questions/1694036/why-is-the-gets-function-so-dangerous-that-it-should-not-be-used
+
+Why is gets() dangerous
+
+The first internet worm (the Morris Internet Worm) escaped about 30 years ago (1988-11-02), and it used gets() and a buffer overflow as one of its methods of propagating from system to system. The basic problem is that the function doesn't know how big the buffer is, so it continues reading until it finds a newline or encounters EOF, and may overflow the bounds of the buffer it was given.

@@ -1,6 +1,6 @@
 #include<stdio.h>
-#define IN 1
-#define OUT 0
+#define IN 1 // inside the word
+#define OUT 0 // outside the word
 
 
 main()
@@ -13,6 +13,8 @@ main()
 	++nc;
 	if (c=='\n')
 		++nl;
+
+	//This simple variable state takes care of not missing the word and taking ' ' or \n or \t as character
 	if (c==' ' || c == '\n' || c=='\t')
 		state = OUT;
 	else if (state == OUT){
