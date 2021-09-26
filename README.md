@@ -1,2 +1,2 @@
 # Code-Snippets
-Code Snippets for quick revision.
+Filter the code for faster integration in Work.
