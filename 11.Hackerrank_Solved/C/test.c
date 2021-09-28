@@ -1,37 +1,34 @@
 #include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
 
-int main()
-{
-	int array[10] = {3,3,5,5,3,6,7,7,7,5}, max = 0;
-	int k = 4;
-for(int i = 0; i < 5; i++)
-{
+//Complete the following function.
 
-	if((array[i] < array[i+1]))
-	{
-		if((array[i+1] < k) && (max < array[i+1]))
-		{
-			max = array[i+1];
-		}
-		else if(array[i+1] >= k)
-		{
-			continue;
-		}
-	}
-	else if(array[i] < k)
-	{
-		max = array[i];
-	}
-	else
-	{
-		continue;
-	}
-
+int marks_summation(int* marks, int number_of_students, char gender) {
+    int sum = 0;
+    for (int i = (gender == 'b' ? 0 : 1); i < number_of_students; i = i + 2) 
+        sum += *(marks + i);
+    
+    return sum;
 }
 
-
-printf("%d ", max);
-printf("\n");
-
-	return 0;
+int main() {
+    int number_of_students;
+    char gender;
+    int sum;
+  
+    scanf("%d", &number_of_students);
+    int *marks = (int *) malloc(number_of_students * sizeof (int));
+ 
+    for (int student = 0; student < number_of_students; student++) {
+        scanf("%d", (marks + student));
+    }
+    
+    scanf(" %c", &gender);
+    sum = marks_summation(marks, number_of_students, gender);
+    printf("%d", sum);
+    free(marks);
+ 
+    return 0;
 }
