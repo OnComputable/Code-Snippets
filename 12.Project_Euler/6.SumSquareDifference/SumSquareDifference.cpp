@@ -13,3 +13,36 @@
  *		     -Wsign-conversion -Werro FileName.cpp
  * ----------------------------------------------------------------------
 */
+
+// need to compiler progam
+// as - g++ programname -lm     as math.h is present
+
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int main(void)
+{	
+	int Difference, SumOfSquare = 0, SquareOfSum = 0;
+
+	for(int i = 1; i <101; i++)
+	{
+		SumOfSquare += pow(i,2);
+		SquareOfSum += i;
+	}
+
+	SquareOfSum = pow(SquareOfSum, 2);
+
+	if(SquareOfSum > SumOfSquare)
+	{
+		Difference = SquareOfSum - SumOfSquare;
+	}
+	else
+	{
+		Difference = SumOfSquare - SquareOfSum;
+	}
+
+	cout << Difference << "\n\n";
+
+	return 0;
+}
