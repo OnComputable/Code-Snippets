@@ -3,7 +3,7 @@
 #define SIZE 4
 int main(void)
 {	
-	int no_data[SIZE];	// uninitialized array
+	//int no_data[SIZE];	// uninitialized array
 	int i;
 
 	printf("%2s%14s\n","i", "no_data[i]");
