@@ -1,0 +1,24 @@
+-- Read the following to get the required context -- 
+
+1. Following programs are a set of tutorials published by the site - https://www.learncpp.com/ 
+2. Thanks to these guys I am able to strengthen my understanding on C++.
+3. Cpp Command: g++ -std=c++17 -Wall -Weffc++ -Wextra -Wsign-conversion -Werror -pedantic-errors 2.cpp 
+---------------------------------------------------------------------------------------
+Setting a language standard in g++ [Choose your standard accordinagly]
+
+For GCC/G++, you can pass compiler flags -std=c++11, -std=c++14, -std=c++17, or -std=c++20 to enable C++11/14/17/20 support respectively. If you have GCC 8 or 9, you’ll need to use -std=c++2a for C++20 support instead.   
+---------------------------------------------------------------------------------------
+--> For compiling program.
+4. Cpp Command: -pedantic-errors  --> add this flag while compiling to comply the program to cpp standards
+5. Cpp Name Synonym and versions:
+Here’s a mapping of code names to the final names:
+
+    c++1x = C++11
+    c++1y = C++14
+    c++1z = C++17
+    c++2a = C++20
+    c++2b = C++23
+
+For example, if you see c++1z, this is synonymous with the C++17 language standard.
+
+
