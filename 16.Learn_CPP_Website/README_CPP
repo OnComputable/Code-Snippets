@@ -20,5 +20,8 @@ Here’s a mapping of code names to the final names:
     c++2b = C++23
 
 For example, if you see c++1z, this is synonymous with the C++17 language standard.
-
-
+6. Using uninitialized variables is one of the most common mistakes that novice programmers make, and unfortunately, it can also be one of the most challenging to debug (because the program may run fine anyway if the uninitialized variable happened to get assigned to a spot of memory that had a reasonable value in it, like 0).
+7. Take care to avoid all situations that result in undefined behavior, such as using uninitialized variables [UB].
+8. Implementation-defined behavior means the behavior of some syntax is left up to the implementation (the compiler) to define
+9. The C++ standard library uses the underscore method for both variables and functions. Sometimes you’ll see a mix of the two: underscores used for variables and intercaps used for functions.
+10.  you should avoid naming your identifiers starting with an underscore, as these names are typically reserved for OS, library, and/or compiler use.
